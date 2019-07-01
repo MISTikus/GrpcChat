@@ -1,0 +1,31 @@
+﻿syntax = "proto3";
+
+package GrpcChat.Models;
+
+message History {
+  repeated GrpcChat.Models.Message messages = 1;
+}
+
+message Message {
+	int64 timestamp = 1;
+	string userName = 2;
+	string text = 3;
+}
+
+enum AuthResult{
+	Success = 0;
+	FailToken = 1;
+	FailLogin = 2;
+	FailPassword = 3;
+}
+
+message Credentials {
+	string userName = 1;
+	string password = 2;
+	string token = 3;
+	AuthResult result = 4;
+}
+
+message Empty {
+
+}

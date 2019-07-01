@@ -1,0 +1,11 @@
+﻿syntax = "proto3";
+
+option csharp_namespace = "GrpcChat.Service";
+
+package GrpcChat;
+
+import "Models/models.proto";
+
+service Authentication {
+  rpc Authenticate (GrpcChat.Models.Credentials) returns (GrpcChat.Models.Credentials) {}
+}

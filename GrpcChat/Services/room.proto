@@ -1,0 +1,13 @@
+﻿syntax = "proto3";
+
+option csharp_namespace = "GrpcChat.Service";
+
+package GrpcChat;
+
+import "Models/models.proto";
+
+service Room {
+  rpc GetAllMessages (GrpcChat.Models.Empty) returns (GrpcChat.Models.History) {}
+  rpc Listen(GrpcChat.Models.Empty) returns (stream GrpcChat.Models.Message) {}
+  rpc Publish(stream GrpcChat.Models.Message) returns (GrpcChat.Models.Empty) {}
+}
