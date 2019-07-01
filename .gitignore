@@ -1,7 +1,8 @@
 
-#Ignore thumbnails created by Windows
+### Ignore thumbnails created by Windows
 Thumbs.db
-#Ignore files built by Visual Studio
+
+### Ignore files built by Visual Studio
 *.obj
 *.exe
 *.pdb
@@ -28,5 +29,9 @@ obj/
 _ReSharper*/
 [Tt]est[Rr]esult*
 .vs/
-#Nuget packages folder
+
+### Nuget packages folder
 packages/
+
+### JS Protos
+**/wwwroot/proto/*

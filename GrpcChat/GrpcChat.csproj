@@ -18,4 +18,8 @@
     <None Remove="Services\auth.proto" />
   </ItemGroup>
   
+  <Target Name="PostBuild" BeforeTargets="PreBuildEvent">
+    <Exec Command="pwsh -File $(ProjectDir)generateJs.ps1" />
+  </Target>
+  
 </Project>
