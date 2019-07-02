@@ -9,17 +9,16 @@
     <PackageReference Include="Grpc" Version="1.21.0" />
     <PackageReference Include="Grpc.Tools" Version="1.21.0" PrivateAssets="All" />
   </ItemGroup>
-  
+
   <ItemGroup>
     <Protobuf Include="**/*.proto" />
   </ItemGroup>
-  
+
   <ItemGroup>
     <None Remove="Services\auth.proto" />
   </ItemGroup>
-  
+
   <Target Name="PostBuild" BeforeTargets="PreBuildEvent">
     <Exec Command="pwsh -File $(ProjectDir)generateJs.ps1" />
   </Target>
-  
 </Project>

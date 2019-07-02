@@ -34,4 +34,8 @@ _ReSharper*/
 packages/
 
 ### JS Protos
-**/wwwroot/proto/*
+**/wwwroot/src/proto/*
+**/wwwroot/dist/*
+
+### Node modules
+**/wwwroot/node_modules

@@ -43,6 +43,7 @@ namespace GrpcChat.Host
 
             app.UseHttpsRedirection();
             app.UseMvc();
+            app.UseFileServer();
         }
     }
 }
